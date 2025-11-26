@@ -1,0 +1,60 @@
+<!--
+    File: index.html
+    GUI Assignment: HW4 Part 1 - jQuery Validation Plugin
+    Platon Supranovich, UMass Lowell Computer Science, Platon_Supranovich@student.uml.edu
+    Copyright (c) 2025 by Platon. All rights reserved. May be freely copied or
+    excerpted for educational purposes with credit to the author.
+    updated by PS on November 15, 2025 at 8:00 AM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+
+    <form id="tableForm" novalidate>
+        <div class="form-grid">
+            <div class="input-group">
+                <label for="startCol">Start Multiplier</label>
+                <input type="number" name="startCol" id="startCol" required>
+                <div class="error-placeholder"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="endCol">End Multiplier</label>
+                <input type="number" name="endCol" id="endCol" required>
+                <div class="error-placeholder"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="startRow">Start Multiplicand</label>
+                <input type="number" name="startRow" id="startRow" required>
+                <div class="error-placeholder"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="endRow">End Multiplicand</label>
+                <input type="number" name="endRow" id="endRow" required>
+                <div class="error-placeholder"></div>
+            </div>
+        </div>
+
+        <button type="submit">Generate Table</button>
+    </form>
+
+    <div class="table-container">
+        <table id="resultTable"></table>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
